@@ -14,7 +14,6 @@ class FeatuerBoocksListView extends StatelessWidget {
           return const Padding(
             padding: EdgeInsets.only(
               right: 10,
-              left: 8,
             ),
             child: FeatuerListViewItem(),
           );
