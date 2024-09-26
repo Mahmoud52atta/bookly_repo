@@ -1,0 +1,10 @@
+{
+    "configurations": [
+        {
+            "name": "Flutter (lib\\Featuers\\home\\presentaition\\views\\widets\\featuer_ListView_Item.dart)",
+            "type": "dart",
+            "request": "launch",
+            "program": "lib\\Featuers\\home\\presentaition\\views\\widets\\featuer_ListView_Item.dart"
+        }
+    ]
+}
