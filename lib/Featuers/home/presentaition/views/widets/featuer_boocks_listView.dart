@@ -15,7 +15,7 @@ class FeatuerBoocksListView extends StatelessWidget {
             padding: EdgeInsets.only(
               right: 10,
             ),
-            child: FeatuerListViewItem(),
+            child: FeatuerBooksItem(),
           );
         },
       ),

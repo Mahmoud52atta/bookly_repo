@@ -1,10 +1,10 @@
-import 'package:bookly_app/Featuers/home/presentaition/views/widets/home_view_body.dart';
+import 'package:bookly_app/Featuers/home/presentaition/views/widets/book_raiting.dart';
 import 'package:bookly_app/core/utils/assets.dart';
 import 'package:bookly_app/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
-class BestSellerListViewItem extends StatelessWidget {
-  const BestSellerListViewItem({super.key});
+class BestSellerItem extends StatelessWidget {
+  const BestSellerItem({super.key});
 
   @override
   Widget build(BuildContext context) {
