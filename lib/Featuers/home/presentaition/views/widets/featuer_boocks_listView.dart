@@ -1,4 +1,4 @@
-import 'package:bookly_app/Featuers/home/presentaition/views/widets/featuer_ListView_Item.dart';
+import 'package:bookly_app/Featuers/home/presentaition/views/widets/featuer_boocks_item.dart';
 import 'package:flutter/material.dart';
 
 class FeatuerBoocksListView extends StatelessWidget {
