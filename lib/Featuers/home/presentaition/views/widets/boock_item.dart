@@ -6,19 +6,17 @@ class BoockItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var width = MediaQuery.of(context).size.width;
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 106),
-      child: SizedBox(
-        height: MediaQuery.of(context).size.height * .4,
-        child: AspectRatio(
-          aspectRatio: 2.5 / 4,
-          child: Container(
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(16),
-                // color: Colors.red,
-                image: const DecorationImage(
-                    image: AssetImage(AssetsData.testImage))),
-          ),
+      padding: EdgeInsets.symmetric(horizontal: width * .15),
+      child: AspectRatio(
+        aspectRatio: 2.7 / 4,
+        child: Container(
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(16),
+              // color: Colors.red,
+              image: const DecorationImage(
+                  image: AssetImage(AssetsData.testImage))),
         ),
       ),
     );
