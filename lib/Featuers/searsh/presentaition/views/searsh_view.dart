@@ -6,8 +6,14 @@ class SearshView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: SafeArea(child: SearhViewBody()),
+    return const CustomScrollView(
+      slivers: [
+        SliverFillRemaining(
+          child: Scaffold(
+            body: SafeArea(child: SearhViewBody()),
+          ),
+        )
+      ],
     );
   }
 }
