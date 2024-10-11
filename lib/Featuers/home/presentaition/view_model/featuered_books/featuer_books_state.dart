@@ -9,7 +9,7 @@ sealed class FeatuerBooksState extends Equatable {
 
 final class FeatuerBooksInitial extends FeatuerBooksState {}
 
-final class FeatuerBooksLauding extends FeatuerBooksState {}
+final class FeatuerBooksLoading extends FeatuerBooksState {}
 
 final class FeatuerBooksFailuer extends FeatuerBooksState {
   final String errorMessage;

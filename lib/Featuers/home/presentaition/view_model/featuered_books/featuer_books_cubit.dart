@@ -9,7 +9,7 @@ class FeatuerBooksCubit extends Cubit<FeatuerBooksState> {
   FeatuerBooksCubit(this.homeRebo) : super(FeatuerBooksInitial());
   final HomeRebo homeRebo;
   Future<void> fetchFeatuersBooks() async {
-    emit(FeatuerBooksLauding());
+    emit(FeatuerBooksLoading());
     var result = await homeRebo.fetchFeatuersBooks();
     result.fold((failuer) {
       emit(
