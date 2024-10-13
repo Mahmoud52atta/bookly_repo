@@ -6,7 +6,7 @@ import 'package:get_it/get_it.dart';
 final getIt = GetIt.instance;
 
 void setup() {
-  getIt.registerSingleton(
+  getIt.registerSingleton<ApisService>(
     ApisService(Dio()),
   );
   getIt.registerSingleton<HomeReboImpl>(

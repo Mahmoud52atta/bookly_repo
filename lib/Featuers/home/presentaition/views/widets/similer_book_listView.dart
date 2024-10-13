@@ -15,7 +15,10 @@ class SimillerBoxListView extends StatelessWidget {
             padding: EdgeInsets.only(
               right: 10,
             ),
-            child: FeatuerBooksItem(),
+            child: FeatuerBooksItem(
+              imageUrl:
+                  'http://books.google.com/books/content?id=b-2oDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api',
+            ),
           );
         },
       ),
