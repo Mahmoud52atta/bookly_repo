@@ -1,5 +1,5 @@
 import 'package:bookly_app/Featuers/home/data/rebos/home_rebo_impl.dart';
-import 'package:bookly_app/Featuers/home/presentaition/view_model/cubit/newest_books_cubit.dart';
+import 'package:bookly_app/Featuers/home/presentaition/view_model/newest_books/newest_books_cubit.dart';
 import 'package:bookly_app/Featuers/home/presentaition/view_model/featuered_books/featuer_books_cubit.dart';
 import 'package:bookly_app/core/utils/app_router.dart';
 import 'package:bookly_app/core/utils/constants.dart';
@@ -28,7 +28,7 @@ class BooklyApp extends StatelessWidget {
         BlocProvider(
           create: (context) => NewestBooksCubit(
             getIt.get<HomeReboImpl>(),
-          ),
+          )..fetchNewestBooks(),
         )
       ],
       child: MaterialApp.router(

@@ -2,8 +2,10 @@ import 'package:bookly_app/Featuers/home/presentaition/view_model/featuered_book
 import 'package:bookly_app/Featuers/home/presentaition/views/widets/custom_circular_indicator.dart';
 import 'package:bookly_app/Featuers/home/presentaition/views/widets/custom_text_error.dart';
 import 'package:bookly_app/Featuers/home/presentaition/views/widets/featuer_boocks_item.dart';
+import 'package:bookly_app/core/utils/app_router.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 
 class FeatuerBoocksListView extends StatelessWidget {
   const FeatuerBoocksListView({super.key});
@@ -24,9 +26,15 @@ class FeatuerBoocksListView extends StatelessWidget {
                   padding: const EdgeInsets.only(
                     right: 10,
                   ),
-                  child: FeatuerBooksItem(
-                    imageUrl:
-                        state.books[index].volumeInfo.imageLinks.thumbnail,
+                  child: GestureDetector(
+                    onTap: () {
+                      GoRouter.of(context).push(AppRouter.kBoockDetails,
+                          extra: state.books[index]);
+                    },
+                    child: FeatuerBooksItem(
+                      imageUrl:
+                          state.books[index].volumeInfo.imageLinks.thumbnail,
+                    ),
                   ),
                 );
               },

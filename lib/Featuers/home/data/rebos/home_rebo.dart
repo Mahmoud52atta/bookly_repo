@@ -5,4 +5,6 @@ import 'package:dartz/dartz.dart';
 abstract class HomeRebo {
   Future<Either<Failuers, List<BookModel>>> fetchNewestBooks();
   Future<Either<Failuers, List<BookModel>>> fetchFeatuersBooks();
+  Future<Either<Failuers, List<BookModel>>> fetchBookDetails(
+      {required String category});
 }

@@ -1,29 +1,48 @@
+import 'package:bloc/bloc.dart';
+import 'package:bookly_app/Featuers/home/data/models/book_model/book_model.dart';
+import 'package:bookly_app/Featuers/home/presentaition/view_model/book_details/book_details_cubit.dart';
 import 'package:bookly_app/Featuers/home/presentaition/views/widets/boock_details_body.dart';
 import 'package:bookly_app/Featuers/home/presentaition/views/widets/boock_details_appBar.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
-class BoocksDetails extends StatelessWidget {
-  const BoocksDetails({super.key});
+class BoocksDetails extends StatefulWidget {
+  const BoocksDetails({super.key, required this.bookModel});
+  final BookModel bookModel;
+
+  @override
+  State<BoocksDetails> createState() => _BoocksDetailsState();
+}
+
+class _BoocksDetailsState extends State<BoocksDetails> {
+  @override
+  void initState() {
+    BlocProvider.of<BookDetailsCubit>(context)
+        .fetchBookDetails(categpry: widget.bookModel.volumeInfo.categories![0]);
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
-    return const CustomScrollView(slivers: [
+    return CustomScrollView(slivers: [
       SliverFillRemaining(
         hasScrollBody: false,
         child: Scaffold(
           body: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 30),
+            padding: const EdgeInsets.symmetric(horizontal: 30),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                SizedBox(
+                const SizedBox(
                   height: 38,
                 ),
-                BoockDetailsAppBar(),
-                SizedBox(
+                const BoockDetailsAppBar(),
+                const SizedBox(
                   height: 30,
                 ),
-                BoockDetailsBody(),
+                BoockDetailsBody(
+                  bookModel: widget.bookModel,
+                ),
               ],
             ),
           ),
